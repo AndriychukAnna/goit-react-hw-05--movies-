@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/Components/views/FilmSearch/FilmSearch.module.css"],"names":[],"mappings":"AAAA,gCACE,gBAAiB,CACjB,eACF","file":"Film-search.9b5fc009.chunk.css","sourcesContent":[".SearchHeader {\n  padding: 5px 10px;\n  margin-top: 20px;\n}\n"]}
