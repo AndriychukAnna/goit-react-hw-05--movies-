@@ -1,0 +1,22 @@
+.buttonBack {
+  margin: 10px;
+}
+
+.filmContainer {
+  display: flex;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgb(85, 84, 84);
+}
+
+.filmImage {
+  margin-right: 15px;
+}
+
+.informationContainer {
+  padding: 10px;
+  border-bottom: 2px solid rgb(85, 84, 84);
+}
+
+.container {
+  padding: 0 20px;
+}
