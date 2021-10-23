@@ -1,0 +1,11 @@
+.castList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.thumb {
+  text-align: center;
+  color: red;
+  background-color: rgba(25, 25, 173, 0.3);
+  height: 120px;
+}
