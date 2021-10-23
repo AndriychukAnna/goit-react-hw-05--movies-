@@ -7,16 +7,16 @@ const AppBar = lazy(() =>
   import("../AppBar/AppBar.js" /* webpackChunkName: "AppBar" */)
 );
 const HomeView = lazy(() =>
-  import("../views/HomeView/HomeView.js" /* webpackChunkName: "Home-view" */)
+  import("../../views/HomeView/HomeView.js" /* webpackChunkName: "Home-view" */)
 );
 const FilmsView = lazy(() =>
   import(
-    "../views/FilmsView/FilmsView.js" /* webpackChunkName: "Film-search" */
+    "../../views/FilmsView/FilmsView.js" /* webpackChunkName: "Film-search" */
   )
 );
 const FilmDetailsView = lazy(() =>
   import(
-    "../views/FilmDetailsView/FilmDetailsView.js" /* webpackChunkName: "Film-details-view" */
+    "../../views/FilmDetailsView/FilmDetailsView.js" /* webpackChunkName: "Film-details-view" */
   )
 );
 

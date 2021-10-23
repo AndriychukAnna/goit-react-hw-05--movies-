@@ -1,6 +1,6 @@
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
-import { fetchFilmCast } from "../../../FetchFilms/FetchFilms";
+import { fetchFilmCast } from "../../FetchFilms/FetchFilms";
 import styles from "./SubFilmDetailsCastView.module.css";
 
 export default function SubFilmDetailsCastView() {

@@ -6,17 +6,18 @@ import {
   useHistory,
   useLocation,
 } from "react-router";
-import { fetchFilmById } from "../../../FetchFilms/FetchFilms";
+import { fetchFilmById } from "../../FetchFilms/FetchFilms";
 import styles from "./FilmDetailsView.module.css";
+import FilmDetailsViewCard from "../../components/renderFilmCard/FilmDetailsViewCard";
 
 const SubFilmDetailsCastView = lazy(() =>
   import(
-    "../SubFilmDetailsCastView/SubFilmDetailsCastView.js" /* webpackChunkName: "Film-cast-view" */
+    "../../components/SubFilmDetailsCastView/SubFilmDetailsCastView.js" /* webpackChunkName: "Film-cast-view" */
   )
 );
 const SubFilmDetailsReviewsView = lazy(() =>
   import(
-    "../SubFilmDetailsReviewsView/SubFilmDetailsReviewsView.js" /* webpackChunkName: "Film-reviews-view" */
+    "../../components/SubFilmDetailsReviewsView/SubFilmDetailsReviewsView.js" /* webpackChunkName: "Film-reviews-view" */
   )
 );
 
@@ -50,28 +51,9 @@ function FilmDetailsView() {
       <>
         {film && (
           <>
-            <div className={styles.filmContainer}>
-              <div className={styles.filmImage}>
-                <img
-                  src={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
-                  alt={film.original_title ?? film.original_name}
-                />
-              </div>
-              <div>
-                <h2>{film.original_title ?? film.original_name}</h2>
-                <p>User score: {film.popularity}%</p>
-                <h3>Overview</h3>
-                <p>{film.overview}</p>
-                <h3>Genres</h3>
-                <ul>
-                  {film?.genres?.map((genre) => (
-                    <li key={genre.id}>{genre.name}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div>
-              <h3>Additional information</h3>
+            <FilmDetailsViewCard styles={styles}
+              film={ film}/>
+            <h3>Additional information</h3>
               <ul>
                 <li>
                   <Link
@@ -98,7 +80,7 @@ function FilmDetailsView() {
                   </Link>
                 </li>
               </ul>
-            </div>
+            
           </>
         )}
 

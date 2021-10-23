@@ -2,7 +2,7 @@ const API_KEY = "29be72e1593e059d8c4358ef426fadf9";
 
 function fetchTrendingFilms() {
   return fetch(
-    `https://api.themoviedb.org/3/trending/all/day?api_key=${API_KEY}`
+    `https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}`
   ).then((res) => res.json());
 }
 

@@ -1,14 +1,15 @@
-import { Link, useHistory, useLocation } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { fetchSearchFilms } from "../../../FetchFilms/FetchFilms";
+import { fetchSearchFilms } from "../../FetchFilms/FetchFilms";
 import FilmSearch from "../FilmSearch";
+import RenderFilmCard from "../../components/renderFilmCard/RenderFilmCard";
 
 function FilmsView() {
   const history = useHistory();
   const location = useLocation();
 
   const [filmName, setFilmName] = useState("");
-  const [searchResult, setSearchResult] = useState(null);
+  const [searchResult, setSearchResult] = useState([]);
 
   useEffect(() => {
     if (location.search === "") {
@@ -48,20 +49,7 @@ function FilmsView() {
       <FilmSearch onSubmit={handleSearchSubmit} />
 
       <ul>
-        {searchResult &&
-          searchResult.map((result) => (
-            <li key={result.id}>
-              <Link
-                to={{
-                  pathname: `/movies/${result.id}`,
-                  state: { from: location },
-                }}
-              >
-                {result.title}
-                {result.name}
-              </Link>
-            </li>
-          ))}
+        <RenderFilmCard searchResult={searchResult}/>
       </ul>
     </div>
   );

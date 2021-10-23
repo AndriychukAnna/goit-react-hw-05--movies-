@@ -1,6 +1,6 @@
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
-import { fetchFilmReviews } from "../../../FetchFilms/FetchFilms";
+import { fetchFilmReviews } from "../../FetchFilms/FetchFilms";
 
 export default function SubFilmDetailsReviewsView() {
   const [reviews, setReviews] = useState(null);
